@@ -38,7 +38,7 @@ This API provides endpoints to manage car information. Users can create, update,
 
 - All endpoints require authentication.
 - Endpoints GET `/api/v1/cars-information`, POST `/api/v1/cars-information/{id}`, GET `/api/v1/cars-information/{id}` are accessible to both ADMIN and USER roles.
-- Endpoints GET `/api/v1/cars-information`, POST `/api/v1/cars-information/{id}`, GET `/api/v1/cars-information/{id}`, PUT `/api/v1/cars-information/{id}`,  DELETE `/api/v1/cars-information/{id}` require the ADMIN role for access.
+- Endpoints PUT `/api/v1/cars-information/{id}`,  DELETE `/api/v1/cars-information/{id}` require the ADMIN role for access.
 
 ## Request and Response Formats
 
