@@ -33,6 +33,7 @@ since users are pre-loaded into the DB you can use thier username/password depen
 4. You will get a accessToken response with a JWT if username/password is correct.
 5. Put JWT into Authorization section of postman, type is Barrer Token.
 6. Call the other endpoints to see CRUD functionality.
+7. Since JWT stops being valid after 60 second, I recommend to call it each time before calling the /api/v1/cars-information endpoints.
 
 ## Endpoints
 
