@@ -29,6 +29,7 @@ This API provides endpoints to manage car information. Users can create, update,
    "password":string
    }
 since users are pre-loaded into the DB you can use thier username/password depending on your need for roles.
+
 4. You will get a accessToken response with a JWT if username/password is correct.
 5. Put JWT into Authorization section of postman, type is Barrer Token.
 6. Call the other endpoints to see CRUD functionality.
