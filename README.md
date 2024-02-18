@@ -2,6 +2,11 @@
 
 This API provides endpoints to manage car information. Users can create, update, delete, and retrieve car information based on their permissions.
 
+# How to launch
+1. Build the project using command: mvn clean install
+2. Navigate through the terminal to info-service package where docker-compose is located
+3. Use command in the terminal "docker-compose up" to launch DB and built service.
+
 ## Endpoints
 
 - **Create Car Information:**
