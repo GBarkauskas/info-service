@@ -4,9 +4,11 @@ import com.car.info.service.infoservice.filter.JwtAuthFilter;
 import com.car.info.service.infoservice.repository.UserRepository;
 import com.car.info.service.infoservice.security.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -41,10 +43,7 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf().disable()
                 .authorizeHttpRequests()
-                .requestMatchers(PathRequest.toH2Console()).permitAll()
-                .and()
-                .authorizeHttpRequests()
-                .requestMatchers("/", "/webjars/**", "/error", "/api/v1/login").permitAll()
+                .requestMatchers("/", "/webjars/**", "/error", "/api/v1/login", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 .and()
                 .authorizeHttpRequests().requestMatchers("/api/v1/cars-information")
                 .authenticated()
