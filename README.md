@@ -71,7 +71,7 @@ This API provides endpoints to manage car information. Users can create, update,
 
 - Ensure that proper authentication tokens are included in the request headers.
 
-### Sample Request
+### Sample Response
 
 ```json
 POST /api/v1/cars-information
