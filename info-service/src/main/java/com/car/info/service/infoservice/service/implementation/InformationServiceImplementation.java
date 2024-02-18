@@ -32,6 +32,8 @@ public class InformationServiceImplementation implements InformationService {
             throw new UnableToFindInformationException("Unable to find information with given parameters.");
         }
 
+        existingInformation.setMake(information.getMake());
+        existingInformation.setModel(information.getModel());
         existingInformation.setAcceleration(information.getAcceleration());
         existingInformation.setEngine(information.getEngine());
         existingInformation.setFuelType(information.getFuelType());

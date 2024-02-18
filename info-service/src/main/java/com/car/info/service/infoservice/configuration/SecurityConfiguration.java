@@ -42,7 +42,7 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests()
                 .requestMatchers("/", "/webjars/**", "/error", "/api/v1/login", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 .and()
-                .authorizeHttpRequests().requestMatchers("/api/v1/cars-information")
+                .authorizeHttpRequests().requestMatchers("/api/v1/cars-information" ,"/api/v1/cars-information/**")
                 .authenticated()
                 .and()
                 .sessionManagement()
